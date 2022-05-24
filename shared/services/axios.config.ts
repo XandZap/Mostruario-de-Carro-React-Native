@@ -38,6 +38,7 @@ instance.interceptors.response.use(
   function (error: AxiosError) {
     if (error.response) {
       const handleError = error.response;
+      
       return Promise.reject(handleError);
     } else if (error.toString() === "Error: Network Error") {
       Alert.alert("Erro", "Falha no servidor");

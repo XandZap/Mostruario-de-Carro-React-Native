@@ -1,6 +1,5 @@
-import React from "react";
-import { Pressable, StyleSheet, Text, View } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { ButtonPressable, ButtonText } from "./Styles";
 
 interface props {
   onPress: () => void;
@@ -9,29 +8,16 @@ interface props {
 
 const AccountButton: React.FC<props> = ({ children, onPress }) => {
   return (
-    <Pressable
+    <ButtonPressable
       android_ripple={{ color: "#ccc" }}
       onPress={onPress}
-      style={({ pressed }) => [
-        styles.container,
-        pressed && { opacity: 0.5 },
-      ]}
+      style={({ pressed }) => pressed && { opacity: 0.5 }}
     >
-      <Text style={styles.text}>
-        {children} <Ionicons name="person" color="#B5C401" style={{ marginLeft: 5 }} ></Ionicons>
-      </Text>
-    </Pressable>
+      <ButtonText style={{ fontWeight: "bold" }}>
+        {children} <Ionicons name="person" color="#B5C401" style={{ marginLeft: 5 }}></Ionicons>
+      </ButtonText>
+    </ButtonPressable>
   );
 };
 
 export default AccountButton;
-
-const styles = StyleSheet.create({
-  container: {
-    alignItems: "center",
-  },
-  text: {
-    fontWeight: "bold",
-    color: "#B5C401",
-  },
-});

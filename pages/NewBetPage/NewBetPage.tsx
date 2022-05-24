@@ -11,8 +11,7 @@ import { GlobalColors } from "../../shared";
 
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 
-import CartButton from "../../components/UI/CartButton";
-import Loading from "../../components/UI/Loading";
+import { CartButton, Loading } from "../../components/UI";
 import NewBetFilter from "../../components/Games/NewBetFilter";
 
 import NumbersButton from "./NumbersButton";

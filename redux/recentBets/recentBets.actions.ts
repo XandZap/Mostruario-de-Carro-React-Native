@@ -2,7 +2,6 @@ import { betsServices } from "../../shared/services";
 import { getFilteredBet, getRecentBet } from "./recentBets.slice";
 import { AppThunk } from "../store";
 
-
 const { listBet, filterBets } = betsServices();
 
 export const fetchRecentBetData = (): AppThunk => {

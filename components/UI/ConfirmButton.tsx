@@ -1,6 +1,5 @@
-import React from "react";
-import { Pressable, StyleSheet, Text, View } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { ButtonPressable, ButtonText } from "./Styles";
 
 interface props {
   onPress: () => void;
@@ -10,26 +9,16 @@ interface props {
 
 const ConfirmButton: React.FC<props> = ({ children, onPress, header }) => {
   return (
-    <Pressable
+    <ButtonPressable
       android_ripple={{ color: "#ccc" }}
       onPress={onPress}
-      style={({pressed}) => [styles.container, !header && { margin: 5, padding: 3, marginTop: 15 }, pressed && {opacity: 0.5}]}
+      style={({ pressed }) => [!header && { margin: 5, padding: 3, marginTop: 15 }, pressed && { opacity: 0.5 }]}
     >
-      <Text style={styles.text}>
+      <ButtonText style={{ fontWeight: "bold" }}>
         {children} <Ionicons name="arrow-forward-outline" color="#B5C401" style={{ marginLeft: 5 }} />
-      </Text>
-    </Pressable>
+      </ButtonText>
+    </ButtonPressable>
   );
 };
 
 export default ConfirmButton;
-
-const styles = StyleSheet.create({
-  container: {
-    alignItems: "center",
-  },
-  text: {
-    fontWeight: "bold",
-    color: "#B5C401",
-  },
-});

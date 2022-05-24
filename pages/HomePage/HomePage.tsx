@@ -1,19 +1,18 @@
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import React, { useEffect, useLayoutEffect, useState } from "react";
-import { Text, useWindowDimensions } from "react-native";
+import { useWindowDimensions } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
 import { NavigatorParamsList } from "../../shared/utils/types";
 
 import { selectGames, selectRecentBet } from "../../redux/store";
 import { fetchFilteredBetsData, fetchRecentBetData } from "../../redux/recentBets/recentBets.actions";
 
-import AccountButton from "../../components/UI/AccountButton";
-import ConfirmButton from "../../components/UI/ConfirmButton";
+import {AccountButton ,ConfirmButton} from "../../components/UI";
+import ContainerSafeAreaView from "../../components/SafeArea/ContainerSafeAreaView";
 import Filters from "../../components/Games/Filters";
 import { ButtonFilters } from "./ButtonFilter";
 import ListRecentBets from "./ListRecentBets";
 import { AlertRecentBetText, RecentBetView, ViewRecent } from "./styles";
-import ContainerSafeAreaView from "../../components/SafeArea/ContainerSafeAreaView";
 
 interface props {
   navigation: NativeStackNavigationProp<NavigatorParamsList, "Home">;
@@ -50,7 +49,7 @@ const HomePage: React.FC<props> = ({ navigation }) => {
   });
 
   const handleFilters = () => {
-    if(isFilters) setCheckedGames([])
+    if (isFilters) setCheckedGames([]);
     setIsFilters(!isFilters);
   };
 

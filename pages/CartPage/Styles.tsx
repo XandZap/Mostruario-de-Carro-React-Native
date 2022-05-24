@@ -1,6 +1,5 @@
 import styled from "styled-components/native";
 import { GlobalColors } from "../../shared";
-import Ionicons from "@expo/vector-icons/Ionicons";
 
 export const ViewContainer = styled.View`
   flex: 1;
@@ -57,9 +56,9 @@ font-size: 16px;
 
 export const Text = styled.Text``;
 
-const Pressable = styled.Pressable`
+export const PressableSaveButton = styled.Pressable`
   width: 85%;
-  min-height: 60px;
+  min-height: 10%;
   background-color: ${GlobalColors.grey70};
   border: 1px solid ${GlobalColors.grey80};
   border-bottom-left-radius: 10px;
@@ -69,22 +68,14 @@ const Pressable = styled.Pressable`
   justify-content: center;
 `;
 
-const SaveText = styled.Text`
+export const SaveText = styled.Text`
   color: ${GlobalColors.green200};
   font-weight: bold;
   font-size: 28px;
   font-style: italic;
 `;
 
-export const SaveButton: React.FC<{ onPress: () => void }> = ({ onPress }) => {
-  return (
-    <Pressable onPress={onPress} style={({ pressed }) => pressed && { opacity: 0.5 }}>
-      <SaveText>
-        Salvar <Ionicons name="arrow-forward-outline" color={GlobalColors.green200} size={28} />
-      </SaveText>
-    </Pressable>
-  );
-};
+
 
 export const BetButtonContainer = styled.View`
   flex-direction: row;

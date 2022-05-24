@@ -1,15 +1,17 @@
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { useLayoutEffect } from "react";
 import { SubmitHandler } from "react-hook-form";
-import { Alert, Button, ScrollView, useWindowDimensions } from "react-native";
+import { Alert, ScrollView, useWindowDimensions } from "react-native";
 import { useDispatch } from "react-redux";
-import { Card } from "../../components/UI/Card";
+
 import { removeUser, updateUserRedux } from "../../redux/user/user.slice";
-import { NavigatorParamsList } from "../../shared";
 import { userServices } from "../../shared/services";
-import AccountInput from "./AccountInput";
-import { AccountContainer, LogoutButton, TextButton } from "./Styles";
+
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { Card } from "../../components/UI";
+import AccountInput from "./AccountInput";
+import { NavigatorParamsList } from "../../shared";
+import { AccountContainer, LogoutButton, TextButton } from "./Styles";
 
 interface props {
   navigation: NativeStackNavigationProp<NavigatorParamsList, "Home">;
@@ -49,7 +51,6 @@ const AccountPage: React.FC<props> = ({ navigation }) => {
     } catch (error) {
       Alert.alert("Erro", "Erro ao atualizar nome");
     }
-    console.log(data);
   };
 
   return (

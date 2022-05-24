@@ -1,12 +1,10 @@
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import Form from "../../components/UI/Form";
 import { NavigatorParamsList } from "../../shared/utils/types";
 
 import { SubmitHandler } from "react-hook-form";
 import FormInput from "../../components/FormInput";
-import BackButton from "../../components/UI/BackButton";
 import { useState } from "react";
-import Loading from "../../components/UI/Loading";
+import { Form, BackButton, Loading } from "../../components/UI";
 import { authServices } from "../../shared/services";
 import { useDispatch } from "react-redux";
 import { addUser } from "../../redux/user/user.slice";
@@ -35,7 +33,7 @@ const LoginPage: React.FC<LoginProps> = ({ navigation }) => {
       dispatch(addUser(response.data));
     } catch (error: any) {
       if (error.data.error.message) setErrorMessage(`Falha no login: ${error.data.error.message}`);
-      else console.log("erro do console:", error);
+      else console.log("error:", error);
       setIsAuthenticating(false);
     }
   };

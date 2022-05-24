@@ -2,18 +2,22 @@ import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { useState } from "react";
 import { Alert, useWindowDimensions } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
-import { CartCard } from "../../components/UI/Card";
+
 import { clearCart } from "../../redux/cart/cart.slice";
 import { fetchRecentBetData } from "../../redux/recentBets/recentBets.actions";
 import { selectCart } from "../../redux/store";
+
 import { NavigatorParamsList, priceOnBrl } from "../../shared";
 import { betsServices } from "../../shared/services";
+
+import { SaveButton } from "./SaveButton";
+import { CartCard } from "../../components/UI";
 import BetButton from "./BetButton";
+
 import {
   AlertText,
   FlatList,
   MinValueText,
-  SaveButton,
   TitleText,
   TotalContainer,
   TotalOnCart,

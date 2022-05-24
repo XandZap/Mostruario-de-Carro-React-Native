@@ -17,9 +17,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { fetchUserData } from "../redux/user/user.actions";
 import { selectGames, selectUser } from "../redux/store";
-import { getGamesServices } from "../shared/services";
 import { fetchGamesData } from "../redux/games/games-actions";
-import Loading from "../components/UI/Loading";
+import { Loading } from "../components/UI";
 
 const Stack = createNativeStackNavigator();
 
@@ -52,8 +51,6 @@ const AuthStack = () => (
     <Stack.Screen name="ChangePass" component={ChangePassPage} options={{ title: "Resetar Senha" }} />
   </Stack.Navigator>
 );
-
-const { getGames } = getGamesServices();
 
 const Navigation: React.FC = () => {
   const [isLoggin, setIsLoggin] = useState(true);

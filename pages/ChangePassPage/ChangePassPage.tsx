@@ -7,8 +7,7 @@ import { GlobalColors } from "../../shared";
 import { NavigatorParamsList } from "../../shared/utils/types";
 
 import FormInput from "../../components/FormInput";
-import BackButton from "../../components/UI/BackButton";
-import Form from "../../components/UI/Form";
+import { BackButton, Form } from "../../components/UI";
 import { authServices } from "../../shared/services";
 import { Alert } from "react-native";
 

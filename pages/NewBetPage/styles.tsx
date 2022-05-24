@@ -23,7 +23,7 @@ export const CompletePressable = styled.Pressable<{ isCarrinho?: boolean }>`
   margin: 10px;
   width: 110px;
   min-height: 25px;
-  border-radius: 15px;
+  border-radius: 10px;
   border-width: 1px;
   background-color: ${(p) => p.isCarrinho && GlobalColors.green200};
   border-color: ${GlobalColors.green200};

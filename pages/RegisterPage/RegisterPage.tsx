@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import { SubmitHandler } from "react-hook-form";
 
 import FormInput from "../../components/FormInput";
-import Form from "../../components/UI/Form";
-import BackButton from "../../components/UI/BackButton";
-import Loading from "../../components/UI/Loading";
+import { Form, BackButton, Loading } from "../../components/UI/";
 
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { NavigatorParamsList } from "../../shared/utils/types";

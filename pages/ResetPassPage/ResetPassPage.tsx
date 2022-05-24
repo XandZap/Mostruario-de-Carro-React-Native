@@ -1,15 +1,13 @@
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 
 import FormInput from "../../components/FormInput";
-import BackButton from "../../components/UI/BackButton";
-import Form from "../../components/UI/Form";
+import { BackButton, Form } from "../../components/UI/";
 
 import { SubmitHandler } from "react-hook-form";
 
 import { NavigatorParamsList } from "../../shared/utils/types";
 import { authServices } from "../../shared/services";
 import { useState } from "react";
-import axios from "axios";
 import { ErrorText } from "./styles";
 
 type Inputs = {
@@ -31,7 +29,7 @@ const ResetPassPage: React.FC<RegisterProps> = ({ navigation }) => {
       const response = await resetPassword(data);
       const token = response.data.token;
       navigation.navigate("ChangePass", { token });
-    } catch (error) {
+    } catch (error: any) {
       if (error.status === 422) setMessage(error.data.errors[0].message);
       else if (error.status === 404) setMessage(error.data.message);
       setIsErrorMessage(true);
