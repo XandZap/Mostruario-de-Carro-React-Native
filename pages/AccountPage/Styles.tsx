@@ -1,5 +1,5 @@
 import styled from "styled-components/native";
-import { GlobalColors } from "../../shared";
+import { GlobalColors } from "../../shared/utils";
 
 export const AccountContainer = styled.View<{ height: number }>`
   align-items: center;

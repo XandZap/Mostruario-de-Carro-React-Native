@@ -1,4 +1,4 @@
-import { GlobalColors } from "../../shared";
+import { GlobalColors } from "../../shared/utils";
 import { PressableSaveButton, SaveText } from "./Styles";
 import Ionicons from "@expo/vector-icons/Ionicons";
 

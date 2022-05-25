@@ -10,7 +10,7 @@ import { userServices } from "../../shared/services";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { Card } from "../../components/UI";
 import AccountInput from "./AccountInput";
-import { NavigatorParamsList } from "../../shared";
+import { NavigatorParamsList } from "../../shared/utils";
 import { AccountContainer, LogoutButton, TextButton } from "./Styles";
 
 interface props {

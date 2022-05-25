@@ -7,7 +7,7 @@ import { clearCart } from "../../redux/cart/cart.slice";
 import { fetchRecentBetData } from "../../redux/recentBets/recentBets.actions";
 import { selectCart } from "../../redux/store";
 
-import { NavigatorParamsList, priceOnBrl } from "../../shared";
+import { NavigatorParamsList, priceOnBrl } from "../../shared/utils";
 import { betsServices } from "../../shared/services";
 
 import { SaveButton } from "./SaveButton";

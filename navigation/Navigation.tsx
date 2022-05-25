@@ -1,7 +1,7 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
 
-import { GlobalColors } from "../shared";
+import { GlobalColors } from "../shared/utils";
 import {
   LoginPage,
   RegisterPage,
@@ -13,10 +13,10 @@ import {
   CartPage,
 } from "../pages";
 
-import { useDispatch, useSelector } from "react-redux";
+import {  useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { fetchUserData } from "../redux/user/user.actions";
-import { selectGames, selectUser } from "../redux/store";
+import { selectGames, selectUser, useAppDispatch } from "../redux/store";
 import { fetchGamesData } from "../redux/games/games-actions";
 import { Loading } from "../components/UI";
 
@@ -54,7 +54,7 @@ const AuthStack = () => (
 
 const Navigation: React.FC = () => {
   const [isLoggin, setIsLoggin] = useState(true);
-  const dispatch: any = useDispatch();
+  const dispatch:any = useAppDispatch();
   const { types } = useSelector(selectGames);
 
   useEffect(() => {

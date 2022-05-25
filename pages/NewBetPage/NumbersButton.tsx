@@ -1,5 +1,5 @@
 import styled from "styled-components/native";
-import { GlobalColors } from "../../shared";
+import { GlobalColors } from "../../shared/utils";
 
 const View = styled.View`
   justify-content: center;

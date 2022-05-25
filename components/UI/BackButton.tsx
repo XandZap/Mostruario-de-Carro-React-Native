@@ -1,14 +1,13 @@
 import React from "react";
 import { View } from "react-native";
-import Ionicons from "@expo/vector-icons/Ionicons";
-import { GlobalColors } from "../../shared";
+import { Ionicons } from "@expo/vector-icons";
+import { GlobalColors } from "../../shared/utils";
 import { BackButtonPressable, BackButtonText } from "./Styles";
 
 interface props {
   onPress: () => void;
   right: boolean;
 }
-
 
 const BackButton: React.FC<props> = ({ children, onPress, right }) => {
   const ArrowIcon = (
@@ -29,7 +28,11 @@ const BackButton: React.FC<props> = ({ children, onPress, right }) => {
   );
 
   return (
-    <BackButtonPressable style={({ pressed }) => pressed && { opacity: 0.5 }} android_ripple={{ color: "#ccc" }} onPress={onPress}>
+    <BackButtonPressable
+      style={({ pressed }) => pressed && { opacity: 0.5 }}
+      android_ripple={{ color: "#ccc" }}
+      onPress={onPress}
+    >
       <View>{textWithArrow}</View>
     </BackButtonPressable>
   );

@@ -1,6 +1,6 @@
 import { ActivityIndicator, FlatList, useWindowDimensions, View } from "react-native";
 import { initialRecentBetsValue } from "../../redux/recentBets/recentBets.slice";
-import { spaceOnString, priceOnBrl, dateOnString } from "../../shared";
+import { spaceOnString, priceOnBrl, dateOnString } from "../../shared/utils";
 import { GamesType } from "../../shared/interfaces/ListGamesInterfaces";
 import { BetContainer, ContainerInterno, Linha, TextGameType, TextInfo } from "./styles";
 

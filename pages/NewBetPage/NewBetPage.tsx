@@ -7,7 +7,7 @@ import { GameType } from "../../redux/games/interfaces";
 
 import { ContainerFilters, ManageButtonsContainer, MaxNumberText } from "./styles";
 import { NavigatorParamsList } from "../../shared/utils/types";
-import { GlobalColors } from "../../shared";
+import { GlobalColors } from "../../shared/utils";
 
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 

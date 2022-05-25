@@ -1,5 +1,5 @@
 import { initialCartArray, removeFromCart } from "../../redux/cart/cart.slice";
-import { numberPad, priceOnBrl } from "../../shared";
+import { numberPad, priceOnBrl } from "../../shared/utils";
 import {
   BetButtonContainer,
   BetButtonNumbers,

@@ -3,7 +3,7 @@ import { RouteProp } from "@react-navigation/native";
 import { SubmitHandler } from "react-hook-form";
 import styled from "styled-components/native";
 
-import { GlobalColors } from "../../shared";
+import { GlobalColors } from "../../shared/utils";
 import { NavigatorParamsList } from "../../shared/utils/types";
 
 import FormInput from "../../components/FormInput";
